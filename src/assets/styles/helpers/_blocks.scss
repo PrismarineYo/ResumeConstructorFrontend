@@ -1,0 +1,15 @@
+.container-default {
+  padding-left: calc(50% - 600px);
+  padding-right: calc(50% - 600px);
+
+
+  @media screen and (max-width: $breakpoint-laptop-small) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  @media screen and (max-width: $breakpoint-mobile-large) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
