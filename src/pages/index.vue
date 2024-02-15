@@ -3,7 +3,7 @@
 <template>
     <main class="home-page">
         <h1>Home Page</h1>
-        <UiButton size="small">Test</UiButton>
+        <button>asdasd</button>
     </main>
 </template>
 

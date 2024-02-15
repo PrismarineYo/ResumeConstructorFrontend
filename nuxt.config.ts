@@ -11,6 +11,7 @@ export default defineNuxtConfig({
     app: {
         rootId: 'future-name'
     },
+    css: ['@/assets/styles/main.scss'],
     modules: ['@vueuse/nuxt', '@nuxtjs/i18n'],
 
     i18n: {
@@ -19,7 +20,6 @@ export default defineNuxtConfig({
         lazy: true,
         locales: [{ code: 'ru', iso: 'ru', file: 'ru.json' }],
         defaultLocale: 'ru',
-        fallbackLocale: 'ru',
         compilation: {
             strictMessage: false
         },
@@ -40,7 +40,7 @@ export default defineNuxtConfig({
         css: {
             preprocessorOptions: {
                 scss: {
-                    // additionalData: `@use "@/assets/styles/abstracts/_variables.scss" as *; @use "@/assets/styles/abstracts/_mixins.scss" as *;`
+                    additionalData: `@use "@/assets/styles/variables/_variables.scss" as *;`
                 }
             }
         },
