@@ -12,7 +12,7 @@
 
 <style lang="scss">
 .test {
-    background: green;
+    background: $color-bg-base-secondary;
 }
 
 .test-2 {
