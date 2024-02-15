@@ -11,13 +11,8 @@ export default defineNuxtConfig({
     app: {
         rootId: 'future-name'
     },
-    css: ['primevue/resources/themes/aura-light-green/theme.css'],
-    modules: ['@vueuse/nuxt', '@nuxtjs/i18n', 'nuxt-primevue'],
-    primevue: {
-        components: {
-            prefix: 'Ui'
-        }
-    },
+    modules: ['@vueuse/nuxt', '@nuxtjs/i18n'],
+
     i18n: {
         langDir: 'locales',
         types: 'composition',
