@@ -1,12 +1,12 @@
 <script setup lang="ts"></script>
 
 <template>
-    <div class="default-layout">
+    <div class="layout-default">
         <header>header</header>
 
         <NuxtPage />
 
-        <footer>footer</footer>
+        <FooterDefault />
     </div>
 </template>
 

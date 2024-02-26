@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Template</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" rel="stylesheet" />
+</head>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<body>
+
+
+<style>
+    * {
+        font-family: "Roboto", sans-serif;
+        box-sizing: border-box;
+    }
+
+    #template-app {
+        height: 100vh;
+    }
+
+    .template {
+        --bg-base-1: #ffffff;
+        --bg-base-2: #054276;
+        --bg-base-3: #08345d;
+        --color-accent-primary: #054276;
+        --color-accent-secondary: #08345d;
+        height: 100%;
+        aspect-ratio: 1 / 1.414;
+        background-color: var(--bg-base-1);
+        display: flex;
+    }
+
+    .template__aside {
+        width: 32%;
+        height: 100%;
+        background: var(--bg-base-2);
+        color: var(--bg-base-1);
+        padding: 30px 0;
+
+    }
+
+    .template__aside-header {
+        background: var(--bg-base-3);
+        padding: 6px 8px
+    }
+
+    .template__aside-main {
+        margin-bottom: 20px;
+        padding: 6px 8px;
+        font-size: 14px;
+        font-weight: 200;
+    }
+</style>
+
+
+<main id="template-app">
+
+</main>
+<script>
+
+
+    if (window.self !== window.top) {
+
+        let templateIsInjected = false
+
+        const { createApp, ref } = Vue
+
+
+        const form = ref({
+            contacts: {
+                mail: '123123'
+            }
+        })
+
+        const createVueApp = (template) => {
+            createApp({
+                setup() {
+
+                    return {
+                        form
+                    }
+                },
+                template: template
+            }).mount('#template-app')
+        }
+
+        window.addEventListener('message', (message) => {
+
+            if (!templateIsInjected && message.data?.template) {
+                createVueApp(message.data?.template)
+                templateIsInjected = true
+            }
+
+            if (typeof message.data === 'string') {
+                form.value = JSON.parse(message.data).data
+            }
+
+
+            // console.log(templateBody)
+            // console.log(message.data?.template)
+        })
+
+
+    }
+
+</script>
+</body>
+</html>

@@ -1,21 +1,36 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+definePageMeta({
+    layout: 'default'
+})
+
+useHead({
+    title: 'Бесплатный Конструктор Резюме - ResumeMaster',
+    meta: [
+        {
+            name: 'description',
+            content:
+                'Бесплатный конструктор резюме, который поможет создать профессиональное резюме всего за несколько минут.'
+        },
+        {
+            name: 'keywords',
+            content: 'конструктор резюме, бесплатный, профессиональное резюме'
+        }
+    ]
+})
+</script>
 
 <template>
-    <main class="home-page">
-        <h1>Home Page</h1>
-        <button>asdasd</button>
-        <section class="test container-default">
-            <div class="test-2">asdasd</div>
-        </section>
+    <main class="page-home flex-col">
+        <SectionIntro class="page-home__section" />
+        <SectionAdvantages class="page-home__section" />
+        <SectionFaq class="page-home__section" />
     </main>
 </template>
 
 <style lang="scss">
-.test {
-    background: $color-bg-base-secondary;
-}
-
-.test-2 {
-    background: red;
+.page-home {
+    &__section {
+        margin-bottom: var(--gap-section-default);
+    }
 }
 </style>
