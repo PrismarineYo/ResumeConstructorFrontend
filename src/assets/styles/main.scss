@@ -2,6 +2,7 @@
 @import "@/assets/styles/base/fonts";
 
 @import "@/assets/styles/helpers/blocks";
+@import "@/assets/styles/helpers/texts";
 
 * {
   margin: 0;
@@ -12,17 +13,48 @@
   color: inherit;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  //overflow: auto;
+  //
+  //@supports (-moz-animation: inherit) {
+  //  scrollbar-width: thin;
+  //  scrollbar-color: rgba($color-secondary-pink, 0.75) rgba($color-primary-black, 0.5);
+  //}
+  //
+  //&::-webkit-scrollbar-track {
+  //  background-color: transparent;
+  //}
+  //
+  //&::-webkit-scrollbar {
+  //  width: 6px;
+  //  border-radius: 6px;
+  //  background-color: rgba($color-primary-black, 0.5);
+  //}
+  //
+  //&::-webkit-scrollbar-thumb {
+  //  background: linear-gradient(0deg, rgba($color-primary-pink, 0.75) 0%, rgba($color-secondary-pink, 0.75) 50%);
+  //  border-radius: 6px;
+  //}
+
 }
 
-*:disabled {
+::selection {
+  color: var(--color-base-primary);
+  background-color: var(--color-accent-primary-1);
+}
+
+
+:disabled {
   cursor: not-allowed;
 }
 
 html {
   font-size: 16px;
-  color: $color-text-base-primary;
-  background-color: $color-bg-base-primary;
-
+  font-family: Onest, Arial, sans-serif;
+  color: var(--color-text-base-primary);
+  background-color: var(--color-base-primary);
+  scrollbar-color: var(--color-accent-primary-1) var(--color-base-primary);
+  scrollbar-width: thin;
 }
 
 

@@ -1,0 +1,38 @@
+// Colors
+.text-accent-primary-1 {
+  color: var(--color-accent-primary-1)
+}
+
+.title {
+  font-size: 36px;
+
+  @media screen and (max-width: 576px) {
+    font-size: 26px;
+  }
+}
+
+// Font weight
+.fw-200 {
+  font-weight: 200;
+}
+
+.fw-400 {
+  font-weight: 400;
+}
+
+.fw-700 {
+  font-weight: 700;
+}
+
+// Text align
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
