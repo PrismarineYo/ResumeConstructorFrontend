@@ -2,20 +2,31 @@
 export default defineNuxtConfig({
     devtools: { enabled: true },
     srcDir: 'src/',
+
     components: [
         {
             path: '~/components',
             pathPrefix: false
         }
     ],
+
     app: {
         rootId: 'future-name'
     },
+
     css: ['primevue/resources/themes/aura-light-green/theme.css'],
     modules: ['@vueuse/nuxt', '@nuxtjs/i18n', 'nuxt-primevue'],
+
     primevue: {
         components: {
             prefix: 'Ui'
+        }
+    },
+    experimental: {
+        defaults: {
+            nuxtLink: {
+                prefetch: false
+            }
         }
     },
     i18n: {
@@ -24,7 +35,6 @@ export default defineNuxtConfig({
         lazy: true,
         locales: [{ code: 'ru', iso: 'ru', file: 'ru.json' }],
         defaultLocale: 'ru',
-        fallbackLocale: 'ru',
         compilation: {
             strictMessage: false
         },
@@ -34,13 +44,16 @@ export default defineNuxtConfig({
         },
         detectBrowserLanguage: false
     },
+
     imports: {
         dirs: ['stores', 'data']
     },
+
     routeRules: {
         '/': { prerender: true, ssr: false },
         '/edit': { ssr: false }
     },
+
     vite: {
         css: {
             preprocessorOptions: {
@@ -52,5 +65,7 @@ export default defineNuxtConfig({
         esbuild: {
             drop: ['console', 'debugger']
         }
-    }
+    },
+
+    compatibilityDate: '2024-10-03'
 })
