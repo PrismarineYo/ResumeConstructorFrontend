@@ -8,15 +8,6 @@
 @import "@/assets/styles/helpers/utils";
 
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  line-height: 1;
-  font-size: inherit;
-  color: inherit;
-}
-
 ::selection {
   color: var(--color-primary-50);
   background-color: var(--color-brand-500);
@@ -25,6 +16,15 @@
 
 :disabled {
   cursor: not-allowed;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1;
+  font-size: inherit;
+  color: inherit;
 }
 
 html {
@@ -36,5 +36,11 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+a {
+  text-decoration: none;
+}
+
+
 
 
