@@ -1,10 +1,15 @@
 <script setup lang="ts">
 import type { AppIconProps } from '~/components/ui/utils/AppIcon.types'
 
-withDefaults(defineProps<AppIconProps>(), {
-    size: '20px',
-    color: 'accent-primary'
+const props = defineProps<AppIconProps>()
+
+const iconPath = computed(() => `url('/images/icons/${props.icon}.svg')`)
+
+const rotateProperty = computed(() => {
+    return props.rotate ? `${props.rotate}deg` : undefined
 })
+
+const sizeProperty = computed(() => props.size || undefined)
 </script>
 
 <template>
@@ -12,10 +17,10 @@ withDefaults(defineProps<AppIconProps>(), {
         class="app-icon"
         aria-hidden="true"
         :style="{
-            '--svg': `url('/images/icons/${icon}.svg')`,
-            '--color': `var(--color-${color})`,
-            '--rotate': `${rotate}deg`,
-            '--size': size
+            '--svg': iconPath,
+            rotate: rotateProperty,
+            width: sizeProperty,
+            height: sizeProperty
         }"
     />
 </template>
@@ -23,20 +28,13 @@ withDefaults(defineProps<AppIconProps>(), {
 <style lang="scss">
 .app-icon {
     display: inline-flex;
-    background-color: var(--color);
-    transition: transform var(--transition-default);
-
-    transform: rotate(var(--rotate));
-
-    width: var(--size);
-    height: var(--size);
-
+    background-color: currentColor;
+    transition-property: background-color, rotate;
+    transition-duration: var(--transition-default);
     -webkit-mask-image: var(--svg);
     mask-image: var(--svg);
-
     -webkit-mask-size: 100% 100%;
     mask-size: 100% 100%;
-
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
 }

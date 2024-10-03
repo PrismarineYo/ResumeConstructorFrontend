@@ -1,5 +1,7 @@
+export type AppIconType = 'arrow'
+
 export interface AppIconProps {
-    icon: string
+    icon: AppIconType
     color?: string
     size?: string
     rotate?: string | number
