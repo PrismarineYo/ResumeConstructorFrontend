@@ -14,7 +14,7 @@ const sizeProperty = computed(() => props.size || undefined)
 
 <template>
     <span
-        class="app-icon"
+        class="app-icon d-i-flex"
         aria-hidden="true"
         :style="{
             '--svg': iconPath,
@@ -27,7 +27,6 @@ const sizeProperty = computed(() => props.size || undefined)
 
 <style lang="scss">
 .app-icon {
-    display: inline-flex;
     background-color: currentColor;
     transition-property: background-color, rotate;
     transition-duration: var(--transition-default);
