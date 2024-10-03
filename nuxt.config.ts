@@ -11,20 +11,26 @@ export default defineNuxtConfig({
     app: {
         rootId: 'future-name'
     },
-    css: ['@/assets/styles/main.scss'],
-    modules: ['@vueuse/nuxt', '@nuxtjs/i18n'],
+    css: [],
 
+    experimental: {
+        defaults: {
+            nuxtLink: {
+                prefetch: false
+            }
+        }
+    },
+    modules: ['@vueuse/nuxt', '@nuxtjs/i18n'],
     i18n: {
         langDir: 'locales',
         types: 'composition',
         lazy: true,
-        locales: [{ code: 'ru', iso: 'ru', file: 'ru.json' }],
+        locales: [{ code: 'ru', language: 'ru', file: 'ru.json' }],
         defaultLocale: 'ru',
         compilation: {
             strictMessage: false
         },
         bundle: {
-            runtimeOnly: true,
             fullInstall: false
         },
         detectBrowserLanguage: false
@@ -40,12 +46,13 @@ export default defineNuxtConfig({
         css: {
             preprocessorOptions: {
                 scss: {
-                    additionalData: `@use "@/assets/styles/variables/_variables.scss" as *;`
+                    // additionalData: `@use "@/assets/styles/abstracts/_variables.scss" as *; @use "@/assets/styles/abstracts/_mixins.scss" as *;`
                 }
             }
         },
         esbuild: {
             drop: ['console', 'debugger']
         }
-    }
+    },
+    compatibilityDate: '2024-10-03'
 })
