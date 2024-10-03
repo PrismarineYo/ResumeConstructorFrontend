@@ -25,13 +25,12 @@ export default defineNuxtConfig({
         langDir: 'locales',
         types: 'composition',
         lazy: true,
-        locales: [{ code: 'ru', iso: 'ru', file: 'ru.json' }],
+        locales: [{ code: 'ru', language: 'ru', file: 'ru.json' }],
         defaultLocale: 'ru',
         compilation: {
             strictMessage: false
         },
         bundle: {
-            runtimeOnly: true,
             fullInstall: false
         },
         detectBrowserLanguage: false
