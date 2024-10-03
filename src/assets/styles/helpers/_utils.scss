@@ -1,0 +1,163 @@
+.container-default {
+  padding-left: calc(50% - 600px);
+  padding-right: calc(50% - 600px);
+
+  //
+  //@media screen and (max-width: $breakpoint-laptop-small) {
+  //  padding-left: 40px;
+  //  padding-right: 40px;
+  //}
+  //
+  //@media screen and (max-width: $breakpoint-mobile-large) {
+  //  padding-left: 20px;
+  //  padding-right: 20px;
+  //}
+  //@media screen and (max-width: $breakpoint-laptop-small) {
+  //  padding-left: 40px;
+  //  padding-right: 40px;
+  //}
+  //
+  //@media screen and (max-width: $breakpoint-mobile-large) {
+  //  padding-left: 20px;
+  //  padding-right: 20px;
+  //}
+}
+
+.scrollable {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-brand-500) var(--color-primary-50);
+
+
+  &::-webkit-scrollbar {
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: var(--color-primary-50);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--color-brand-500);
+  }
+}
+
+
+.cursor {
+  &-pointer {
+    cursor: pointer;
+  }
+
+  &-disabled {
+    cursor: not-allowed;
+  }
+}
+
+.non-clo
+.fw-200 {
+  font-weight: 200;
+}
+
+.fw-400 {
+  font-weight: 400;
+}
+
+.fw-700 {
+  font-weight: 700;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.radius-xs {
+  border-radius: var(--radius-xs);
+}
+
+.radius-s {
+  border-radius: var(--radius-s);
+}
+
+.radius-m {
+  border-radius: var(--radius-m);
+}
+
+.radius-l {
+  border-radius: var(--radius-l);
+}
+
+.radius-xl {
+  border-radius: var(--radius-xl);
+}
+
+.d-flex {
+  display: flex;
+}
+
+.d-i-flex {
+  display: inline-flex;
+}
+
+.flex {
+  &-col {
+    flex-direction: column;
+  }
+
+  &-wrap {
+    flex-wrap: wrap;
+  }
+}
+
+.items {
+  &-start {
+    align-items: start;
+  }
+
+  &-center {
+    align-items: center;
+  }
+
+  &-end {
+    align-items: flex-end;
+  }
+}
+
+.justify {
+  &-between {
+    justify-content: space-between;
+  }
+
+  &-center {
+    justify-content: center;
+  }
+
+  &-evenly {
+    justify-content: space-evenly;
+  }
+
+  &-end {
+    justify-content: flex-end;
+  }
+}
+
+.d-grind {
+  display: grid;
+}
+
+.grid {
+
+  &-col-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &-col-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

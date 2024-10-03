@@ -9,10 +9,14 @@ export default defineNuxtConfig({
         }
     ],
     app: {
-        rootId: 'future-name'
+        rootId: 'future-name',
+        head: {
+            htmlAttrs: {
+                class: 'scrollable'
+            }
+        }
     },
-    css: [],
-
+    css: ['@/assets/styles/main.scss'],
     experimental: {
         defaults: {
             nuxtLink: {
@@ -43,13 +47,6 @@ export default defineNuxtConfig({
         '/edit': { ssr: false }
     },
     vite: {
-        css: {
-            preprocessorOptions: {
-                scss: {
-                    // additionalData: `@use "@/assets/styles/abstracts/_variables.scss" as *; @use "@/assets/styles/abstracts/_mixins.scss" as *;`
-                }
-            }
-        },
         esbuild: {
             drop: ['console', 'debugger']
         }
