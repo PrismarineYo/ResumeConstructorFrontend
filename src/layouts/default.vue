@@ -2,7 +2,7 @@
 
 <template>
     <div class="layout-default">
-        <header>header</header>
+        <AppHeader class="layout-default__header" />
 
         <NuxtPage />
 
@@ -10,4 +10,11 @@
     </div>
 </template>
 
-<style scoped></style>
+<style lang="scss">
+.layout-default {
+    &__header {
+        position: fixed;
+        inset: 0;
+    }
+}
+</style>

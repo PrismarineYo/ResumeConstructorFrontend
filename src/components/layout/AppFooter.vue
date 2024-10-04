@@ -19,7 +19,7 @@ const pageList = [
     <footer class="app-footer d-flex justify-between items-center container-default">
         <div
             class="app-footer__pages d-flex flex-wrap justify-center"
-            itemscope
+            itemscope="itemscope"
             itemtype="http://schema.org/SiteNavigationElement"
             role="navigation"
         >
@@ -27,13 +27,13 @@ const pageList = [
                 v-for="page in pageList"
                 :key="page.path"
                 :to="page.path"
-                class="app-footer__link"
+                class="app-footer__link color-primary-500"
             >
                 {{ page.title }}
             </NuxtLink>
         </div>
 
-        <p class="app-footer__name fw-700">PerfectResume</p>
+        <p class="app-footer__name color-brand-500 fw-700">PerfectResume</p>
     </footer>
 </template>
 
@@ -42,7 +42,6 @@ const pageList = [
     padding-block: 30px;
     gap: 26px;
     border-top: 1px solid var(--color-primary-200);
-    background: linear-gradient(to bottom, var(--color-primary-100) 0%, transparent 50%);
 
     &__pages {
         gap: 40px;
@@ -53,7 +52,7 @@ const pageList = [
 
         @media (hover: hover) {
             &:hover {
-                color: var(--color-primary-400);
+                color: var(--color-primary-950);
             }
         }
     }
