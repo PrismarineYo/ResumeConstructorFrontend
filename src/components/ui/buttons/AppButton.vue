@@ -34,10 +34,11 @@ const props = withDefaults(defineProps<AppButtonProps>(), {
     --app-button-secondary-color-1: var(--color-primary-50);
     --app-button-secondary-color-2: var(--color-primary-50);
 
-    transition-duration: var(--transition-default);
     font-size: var(--app-button-font-size);
+    transition-duration: var(--transition-default);
 
     &:not(&_type_ghost) {
+        gap: calc(var(--app-button-border-radius) * 1.5);
         padding-inline: calc(var(--app-button-border-radius) * 1.5);
         min-height: var(--app-button-size);
         border-radius: var(--app-button-border-radius);
