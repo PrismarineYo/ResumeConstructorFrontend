@@ -1,4 +1,4 @@
-export type AppIconType = 'arrow'
+export type AppIconType = 'arrow' | 'menu' | 'cross'
 
 export interface AppIconProps {
     icon: AppIconType
