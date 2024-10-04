@@ -22,14 +22,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  line-height: 1;
-  font-size: inherit;
-  color: inherit;
 }
 
 html {
   font-size: 16px;
   font-family: var(--font-primary), Arial, sans-serif;
+  line-height: 1.2;
   color: var(--color-primary-950);
   background-color: var(--color-primary-50);
   text-size-adjust: none;

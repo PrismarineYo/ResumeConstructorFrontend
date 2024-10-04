@@ -2,7 +2,8 @@
 
 <template>
     <main class="home-page">
-        <h1>Home Page</h1>
+        <PrimaryHero />
+        <section style="height: 500vh"></section>
     </main>
 </template>
 

@@ -87,7 +87,7 @@ onClickOutside(
     position: relative;
     padding-inline: 20px;
     height: var(--size-header);
-    border-bottom: 1px solid var(--color-primary-100);
+    border-bottom: 1px solid var(--color-primary-200);
     backdrop-filter: saturate(180%) blur(5px);
     background: var(--color-primary-50-75);
 
@@ -133,7 +133,7 @@ onClickOutside(
             width: 100%;
             padding: 20px;
             background-color: var(--color-primary-50);
-            border-bottom: 1px solid var(--color-primary-100);
+            border-bottom: 1px solid var(--color-primary-200);
             flex-direction: column;
             transform: translate(0, 1px);
             transition: transform var(--transition-slow);
