@@ -3,14 +3,15 @@
 <template>
     <main class="home-page d-flex flex-col">
         <PrimaryHero />
-        <VerticalSteps />
-        <PrimaryHero />
-        <section></section>
+        <StepСards />
+        <VerticalCards />
+        <ActionCard />
     </main>
 </template>
 
 <style scoped>
 .home-page {
     gap: 100px;
+    padding-bottom: 100px;
 }
 </style>

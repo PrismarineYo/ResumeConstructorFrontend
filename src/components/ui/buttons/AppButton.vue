@@ -13,7 +13,7 @@ const props = withDefaults(defineProps<AppButtonProps>(), {
     <component
         :is="props.to ? NuxtLink : 'button'"
         :to="to"
-        class="app-button d-i-flex items-center cursor-pointer"
+        class="app-button d-i-flex items-center justify-center cursor-pointer"
         :class="[`app-button_size_${size}`, `app-button_color_${color}`, `app-button_type_${type}`]"
         :title="title"
         :aria-label="title"

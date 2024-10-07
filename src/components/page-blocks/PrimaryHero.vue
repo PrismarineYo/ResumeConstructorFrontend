@@ -25,7 +25,7 @@ onMounted(() => {
             >
                 <span
                     :key="wordIndex"
-                    class="primary-hero__word color-brand-500"
+                    class="primary-hero__word"
                 >
                     {{ wordList[wordIndex] }}!
                 </span>
@@ -37,8 +37,6 @@ onMounted(() => {
             резюме, которое <span class="primary-hero__marker fw-700 color-brand-500">выделит вас</span> среди других
             кандидатов.
         </p>
-
-        <!--        <h1>Создайте идеальное резюме за несколько минут!</h1>-->
     </section>
 </template>
 
@@ -82,6 +80,10 @@ onMounted(() => {
     &__word {
         display: block;
         text-transform: uppercase;
+        background: -webkit-linear-gradient(90deg, var(--color-brand-400), var(--color-brand-700));
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
 
     &__description {

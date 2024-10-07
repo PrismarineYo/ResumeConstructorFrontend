@@ -19,7 +19,7 @@ const pageList = [
     <footer class="app-footer d-flex justify-between items-center container-default">
         <div
             class="app-footer__pages d-flex flex-wrap justify-center"
-            itemscope="itemscope"
+            itemscope
             itemtype="http://schema.org/SiteNavigationElement"
             role="navigation"
         >

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const stepsList = [
+const cardList = [
     {
         title: 'Профессиональные шаблоны для любых профессий',
         description:
@@ -29,18 +29,18 @@ const stepsList = [
 </script>
 
 <template>
-    <section class="vertical-steps container-default d-flex justify-between items-start">
-        <h2 class="vertical-steps__title">Почему выбирают нас</h2>
+    <section class="vertical-cards container-default d-flex justify-between items-start">
+        <h2 class="vertical-cards__title">Почему выбирают нас</h2>
 
-        <div class="vertical-steps__list d-flex flex-col">
+        <div class="vertical-cards__list d-flex flex-col">
             <div
-                v-for="step in stepsList"
+                v-for="step in cardList"
                 :key="step.title"
-                class="vertical-steps__item radius-xl flex"
+                class="vertical-cards__item radius-xl flex"
             >
-                <div class="vertical-steps__item-body radius-m">
-                    <p class="vertical-steps__item-title fw-700">{{ step.title }}</p>
-                    <p class="vertical-steps__item-description color-primary-500">{{ step.description }}</p>
+                <div class="vertical-cards__item-body radius-m">
+                    <p class="vertical-cards__item-title fw-700">{{ step.title }}</p>
+                    <p class="vertical-cards__item-description color-primary-600">{{ step.description }}</p>
                 </div>
             </div>
         </div>
@@ -48,14 +48,14 @@ const stepsList = [
 </template>
 
 <style lang="scss">
-.vertical-steps {
+.vertical-cards {
     position: relative;
     gap: 40px;
 
     &__title {
         font-size: 36px;
         position: sticky;
-        top: 80px;
+        top: 120px;
     }
 
     &__list {
@@ -80,7 +80,7 @@ const stepsList = [
 }
 
 @media screen and (max-width: 1024px) {
-    .vertical-steps {
+    .vertical-cards {
         flex-direction: column;
         align-items: center;
 
@@ -91,7 +91,7 @@ const stepsList = [
 }
 
 @media screen and (max-width: 768px) {
-    .vertical-steps {
+    .vertical-cards {
         gap: 30px;
 
         &__title {
