@@ -19,34 +19,34 @@ const cardList = [
 </script>
 
 <template>
-    <section class="step-cards container-default d-flex flex-col items-center">
-        <h2 class="step-cards__title text-center">Как это работает</h2>
-        <p class="step-cards__description color-primary-600 text-center">
+    <section class="workflow-cards container-default d-flex flex-col items-center">
+        <h2 class="workflow-cards__title text-center">Как это работает</h2>
+        <p class="workflow-cards__description color-primary-600 text-center">
             Три простых шага, и ваше резюме готово — <span class="color-brand-500 fw-700">бесплатно</span>
         </p>
 
-        <div class="step-cards__list d-flex justify-center flex-wrap">
+        <div class="workflow-cards__list d-flex justify-center flex-wrap">
             <div
                 v-for="card in cardList"
                 :key="card.title"
-                class="step-cards__item d-flex flex-col justify-center text-center"
+                class="workflow-cards__item d-flex flex-col justify-center text-center"
             >
-                <div class="step-cards__item-cell d-flex justify-center items-center radius-m">
+                <div class="workflow-cards__item-cell d-flex justify-center items-center radius-m">
                     <AppIcon
-                        class="step-cards__item-icon"
+                        class="workflow-cards__item-icon"
                         :icon="card.icon"
                     />
                 </div>
 
-                <p class="step-cards__item-title fw-700">{{ card.title }}</p>
-                <p class="step-cards__item-description color-primary-600">{{ card.description }}</p>
+                <p class="workflow-cards__item-title fw-700">{{ card.title }}</p>
+                <p class="workflow-cards__item-description color-primary-600">{{ card.description }}</p>
             </div>
         </div>
     </section>
 </template>
 
 <style lang="scss">
-.step-cards {
+.workflow-cards {
     padding-bottom: 60px;
 
     &__title {
@@ -92,7 +92,7 @@ const cardList = [
 }
 
 @media screen and (max-width: 768px) {
-    .step-cards {
+    .workflow-cards {
         &__title {
             font-size: 26px;
         }
