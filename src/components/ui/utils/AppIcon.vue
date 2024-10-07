@@ -3,7 +3,7 @@ import type { AppIconProps } from '~/components/ui/utils/AppIcon.types'
 
 const props = defineProps<AppIconProps>()
 
-const iconPath = computed(() => `url('/images/icons/${props.icon}.svg')`)
+const iconPath = computed(() => `url('/icons/${props.icon}.svg')`)
 
 const rotateProperty = computed(() => {
     return props.rotate ? `${props.rotate}deg` : undefined
