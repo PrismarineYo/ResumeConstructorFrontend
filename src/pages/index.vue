@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import WorkflowСards from '~/components/page-blocks/WorkflowСards.vue'
-
 useHead({
     title: 'Конструктор резюме бесплатно – Создайте профессиональное резюме онлайн за несколько минут',
     meta: [
@@ -47,7 +45,7 @@ useHead({
 <template>
     <main class="home-page d-flex flex-col">
         <PrimaryHero />
-        <WorkflowСards />
+        <WorkflowCards />
         <VerticalCards />
         <ActionCard />
     </main>
