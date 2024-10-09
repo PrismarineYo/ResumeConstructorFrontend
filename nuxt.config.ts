@@ -32,7 +32,19 @@ export default defineNuxtConfig({
             }
         }
     },
-    modules: ['@vueuse/nuxt', '@nuxtjs/i18n'],
+
+    routeRules: {
+        '/': { prerender: true },
+        '/edit': { ssr: false },
+        '/templates': { ssr: false }
+    },
+    vite: {
+        esbuild: {
+            drop: ['console', 'debugger']
+        }
+    },
+    compatibilityDate: '2024-10-03',
+    modules: ['@vueuse/nuxt', '@nuxtjs/i18n', 'yandex-metrika-module-nuxt3'],
     i18n: {
         langDir: 'locales',
         types: 'composition',
@@ -50,15 +62,8 @@ export default defineNuxtConfig({
     imports: {
         dirs: ['stores', 'data']
     },
-    routeRules: {
-        '/': { prerender: true },
-        '/edit': { ssr: false },
-        '/templates': { ssr: false }
-    },
-    vite: {
-        esbuild: {
-            drop: ['console', 'debugger']
-        }
-    },
-    compatibilityDate: '2024-10-03'
+    yandexMetrika: {
+        id: process.env.YANDEX_METRIKA_ID,
+        webvisor: true
+    }
 })
